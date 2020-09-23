@@ -1,0 +1,682 @@
+<!----MBONGENI SMITH---->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form page</title>
+    <script type="text/javascript" src="js/lightbox.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+     <script  src="https://code.jquery.com/jquery-3.5.1.js"></script>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+     <!---internal stylesheet----->
+     <style>
+*{
+    padding: 0;
+    margin: 0;
+    /*
+    font-family: "open sans", sans-serif;
+    box-sizing: border-box;
+    */
+}
+
+/*navigation code*/
+nav{
+    background: #222222;
+    padding: 10px 40px 10px 70px;
+    border: 1px solid #000;
+    border-left: none;
+    border-right: none;
+    }
+    
+    nav ul{
+      display: flex;
+      list-style: none;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    nav ul li.logo{
+      flex: 1;
+      font-size: 30px;
+      font-weight: 700;
+    }
+    
+    nav ul div.items{
+      padding: 0 25px;
+      display: inline-flex;
+    }
+    
+    nav ul div.items a{
+      text-decoration: none;
+      font-size: 18px;
+      padding: 0 12px;
+    }
+    nav ul div.items a:hover{
+      color: #00ffff;
+    }
+    nav ul .search-icon{
+      height: 40px;
+      width: 240px;
+      display: flex;
+      background: #f2f2f2;
+      border-radius: 5px;
+    }
+    
+    nav ul .search-icon input{
+      height: 100%;
+      width: 200px;
+      border: none;
+      outline: none;
+      padding: 0 10px;
+      color: #000;
+      font-size: 16px;
+      border-radius: 5px 0 0 5px;
+    }
+    
+    nav ul .search-icon .icon{
+      height: 100%;
+      width: 40px;
+      line-height: 40px;
+      text-align: center;
+      border: 1px solid #cccccc;
+      border-radius: o 5px 5px 0;
+      cursor: pointer;
+    }
+    
+    
+    nav ul .search-icon .icon:hover{
+    background: #e6e6e6;
+    }
+    
+    nav ul .search-icon .icon span{
+    color: #222222;
+    font-size: 18px;
+    }
+    
+    
+    nav ul li.btn{
+    
+      font-size: 29px;
+      flex: 1;
+      padding: 0 40px;
+      display: none;
+    }
+    
+    nav ul li.btn span{
+      height: 42px;
+      width: 42px;
+      text-align: center;
+      line-height: 42px;
+      border: 1px solid #151515;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    nav ul li.btn  span.show:before{
+    
+    content: '\f00d';
+    }
+    /*body*/
+body {
+      background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),url(form.jpg);
+      background-position: center;
+      background-size: cover;
+      font-family: sans-serif;
+      margin-top: 40px;
+}
+.regform{
+    width: 800px;
+    background-color:rgb(0,0,0,0.6);
+    margin: auto;
+    color: #ffffff;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    border-radius: 15px 15px 0px 0px;
+}
+.main{
+    background-color: rgb(0,0,0,0.5);
+    width: 800px;
+    margin: auto;
+}
+
+form{
+    padding: 10px;
+}
+
+#name{
+    width: 100%;
+    height: 100px;
+}
+
+.name{
+    margin-left: 25px;
+    margin-top: 30px;
+    width: 125px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.firstname{
+    position: relative;
+    left: 200px;
+    top: -37px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+}
+
+.lastname{
+    position: relative;
+    left: 417px;
+    top: -80px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+    color: #555;
+}
+
+.firstlabel{
+    position: relative;
+    color: #e5e5e5;
+    text-transform: capitalize;
+    font-size: 14px;
+    left: 203px;
+    top: -45px;
+}
+
+.lastlabel{
+    position: relative;
+    color: #e5e5e5;
+    text-transform: capitalize;
+    font-size: 14px;
+    left: 175px;
+    top: -45px;
+}
+
+.adress{
+    position: relative;
+    left: 200px;
+    top: -37px;
+    line-height: 40px;
+    width: 480px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+    color: #555;
+}
+
+.email{
+    position: relative;
+    left: 200px;
+    top: -37px;
+    line-height: 40px;
+    width: 480px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+    color: #555;
+}
+
+.code{
+    position: relative;
+    left: 200px;
+    top: -37px;
+    line-height: 40px;
+    width: 95px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+    color: #555;
+}
+
+.number{
+    position: relative;
+    left: 200px;
+    top: -37px;
+    line-height: 40px;
+    width: 255px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+    color: #555;
+}
+
+.area-code{
+    position: relative;
+    color: #e5e5e5;
+    text-transform: capitalize;
+    font-size: 16px;
+    left: 54px;
+    top: -4px;
+}
+
+.phone-number{
+    position: relative;
+    color: #e5e5e5;
+    text-transform: capitalize;
+    font-size: 16px;
+    left: -100px;
+    top: -2px;
+}
+
+.option{
+    position: relative;
+    left: 200px;
+    top: -37px;
+    line-height: 40px;
+    width: 532px;
+    height: 40px;
+    border-radius: 6px;
+    padding: 0 22px;
+    font-size: 16px;
+    color: #555;
+    outline: none;
+    overflow: hidden;
+}
+
+.option .option{
+    font-size: 20px;
+}
+
+#student{
+    margin-left: 25px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.radio{
+    display: inline-block;
+    padding-right: 70px;
+    font-size: 25px;
+    margin-left: 25px;
+    margin-top: 15px;
+    color: #fff;
+}
+
+.radio input{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+}
+
+button{
+    background-color: #ff9800;
+    display: block;
+    margin-top: 20px 0px 0px 20px;
+    text-align: center;
+    border-radius: 12px;
+    border: 2px solid #366436;
+    padding:12px 110px;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.25px;
+}
+button:hover{
+  background-color: #3d545f;
+}
+
+
+
+
+
+/*footer*/
+.footer{
+    width: 100%;
+    background: #000;
+    display: block;
+  }
+  
+  .inner-footer{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    padding: 30px 10px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: center;
+  }
+  
+  .footer-items{
+    width: 25%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+  }
+  
+  h1{
+    padding: 10px 0;
+    font-size: 25px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  
+  .footer-items p{
+    color: #808080;
+    font-size: 16px;
+    text-align: justify;
+    line-height: 25px;
+  }
+  
+  h2{
+    margin: 10px 0;
+    color: #808080;
+    font-size: 16px;
+    font-weight: lighter;
+    text-transform: uppercase;
+  }
+  
+  .border{
+    height: 2px;
+    width: 100px;
+    background: #ff9800;
+  }
+  
+  ul{
+    list-style: none;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+  }
+  
+  
+  ul a{
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    transition: 0.3s;
+  }
+  
+  ul a:hover{
+    color: #ff9800;
+  }
+  
+  ul li{
+    margin: 10px 0;
+    height: 25px;
+  }
+  
+  li i{
+    margin-right: 20px;
+  }
+  
+  .social-media{
+    width: 100%;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .social-media a{
+  
+    text-decoration: none;
+  }
+  
+  .social-media i{
+    height: 15px;
+    width: 15px;
+    margin: 20px 5px;
+    padding: 10px;
+    color: #fff;
+    /*
+    border-radius: 100%;
+    border: 1px solid grey;
+     */
+    transition: 0.3%;
+  }
+  
+  
+  .social-media i:hover{
+    background: #808080;
+  }
+  
+  
+  
+  .footer-bottom{
+    padding: 10px;
+    background: #3d545f;
+    color: #fff;
+    font-size: 12px;
+  }
+  
+
+  @media screen and (max-width: 1085px){
+    .footer-items{
+      width: 50%;
+    }
+  }
+  
+  
+  @media screen and (max-width: 600px){
+    .footer-items{
+      width: 100%;
+    }
+  }
+  
+  @media screen and (max-width: 1052px){
+  
+    nav{
+      padding: 10px 40px 10px 0px;
+    }
+  
+    nav ul li.logo{
+      display: none;
+    }
+  
+    nav ul div.items{
+      flex: 4;
+    }
+  }
+  
+  
+  @media screen and (max-width: 800px){
+  
+    nav ul li.btn{
+      display: block;
+    }
+  
+    nav{
+      z-index: 1;
+      padding: 9px 40px 9px 0;
+    }
+  
+    nav ul div.items{
+      z-index: -1;
+      position: fixed;
+      top: -220px;
+      right: 0;
+      width: 100%;
+      background: #222222;
+      display: inline-block;
+      transition: top .4s ;
+    }
+  
+    nav ul div.items.show{
+      top: 60px;
+    }
+  
+    nav ul div.items li{
+      text-align: center;
+      line-height: 30px;
+      margin: 30px 0;
+    }
+  
+    nav ul div.items li a{
+      
+      font-size: 19px;
+    }
+  }
+ /*
+@media screen and (max-width:1200px){
+    .inner-content{
+      padding:80px;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .about-section{
+      background-size: 100%;
+      padding: 100px 40px;
+    }
+
+    .inner-content{
+        width: 100%;
+      }
+}
+
+@media screen and (max-width:600px){
+    .about-section{
+      
+      padding:0;
+    }
+
+    .inner-content{
+        padding: 60px;
+      }
+}*/
+     </style>
+</head>
+
+
+<body>
+ <!-----navigation  ------>
+ <nav>
+    <ul>
+      <li class="logo">Nolungile-Pre-School</li>
+     <li class="btn"><span class="fas fa-bars" aria-hidden="false"></span></li>
+      <div class="items">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="form.html">Form</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </div>
+      <li class="search-icon">
+        <input type="search" placeholder="search"> 
+       <label class="icon">
+         <span class="fas fa-search" aria-hidden="false"><img src=""></span>
+       </label>
+      </li>
+    </ul>
+  </nav>
+<!-----body-->
+ <div class="regform"><h1>Enrollment Form</h1></div>
+ <div class="main">
+   <!---form----->
+     <form>
+      <div id="name">
+          <h2 class="name">Name</h2>
+          <input type="text" class="firstname" name="first_name"><br>
+          <label class="firstlabel">first name</label>
+          <input type="text" class="lastname" name="last_name">
+          <label  class="lastlabel">last name</label>
+      </div>
+       <h2 class="name">Physical Adress</h2>
+       <input type="text" class="adress" name="adress">
+
+       <h2 class="name">Email</h2>
+       <input type="text" class="email" name="email">
+
+       <h2 class="name">Phone</h2>
+       <input type="text" class="code" name="area_code"> 
+       <label  class="area-code">Area Code</label>
+       <input type="text" class="number" name="phone">
+       <label  class="phone-number">Phone Number</label>
+
+    <h2 class="name">Disability</h2>
+       <select  class="option" name="disability">
+       <option disabled="disabled" selected="selected">--Choose Option</option>
+     <option>Down syndrom</option>
+     <option>Fragile X syndrom</option>
+     <option>Genetic disorders</option>
+     <option>Spina bifida</option>
+     <option>Other</option>
+    </select>
+
+     <h2 id="student">Gender</h2>
+     <label  class="radio">
+         <input type="radio" class="radio-one"  name="">
+           <span class="checkmark"></span>
+           Male
+        </label>
+        <label  class="radio">
+            <input type="radio" class="radio-two" name="">
+              <span class="checkmark"></span>
+              Female
+           </label>
+
+           <button type="submit">Register</button>
+     </form>
+ </div>
+  
+    <!-----footer------>
+    <div class="footer">
+        <div class="inner-footer">
+          <div class="footer-items">
+            <h1>Nolungile-Pre-School</h1>
+            <p>To provide a child-friendly environment that is safe, secure, caring and stimulating.
+                To enhance the development and education of children through play.
+            </p>
+          </div>
+          
+          <div class="footer-items">
+            <h2>Quick Links</h2>
+            <div class="border"></div>
+           <ul>
+             <a href="#"><li>Home</li></a>
+             <a href="#"><li>Gallery</li></a>
+             <a href="#"><li>About</li></a>
+             <a href="#"><li>Service</li></a>
+             <a href="#"><li>Contact</li></a>
+           </ul>
+          </div>
+          <div class="footer-items">
+            <h2>Activities</h2>
+            <div class="border"></div>
+           <ul>
+             <a href="#"><li>Painting</li></a>
+             <a href="#"><li>Chess</li></a>
+             <a href="#"><li>Chess</li></a>
+             <a href="#"><li>Art</li></a>
+             <a href="#"><li>Reading</li></a>
+           </ul>
+          </div>
+          <div class="footer-items">
+            <h2>Contact Us</h2>
+            <div class="border"></div><br>
+           <ul>
+            <a href="https://satellites.pro/Khayelitsha_map"></a> <i class="fa fa-map-marker" aria-hidden="false"></i>B1034A, Ngwenye Street, Site C</i><br><br>
+            <i class="fa fa-phone" aria-hidden="false"></i>0822241337</i><br><br>
+            <i class="fa fa-envelope" aria-hidden="false"i>support@mbongenismith.com</i><br><br>
+
+          </ul>
+          <div class="social-media">
+            <a href=""><i class="fa fa-facebook" aria-hidden="false"></i></i></a>
+            <a href=""><i class="fa fa-twitter" aria-hidden="false"></i></i></a>
+            <a href=""><i class="fa fa-instagram" aria-hidden="false"></i></i></a>
+            <a href=""><i class="fa fa-google-plus" aria-hidden="false"></i></i></a>
+          </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          copyright &copy; Mbongeni Smith 2020. All rights reserved.
+        </div>
+      </div>
+
+     <!-------javascript for navigation-------->
+       <script>
+        $('nav ul li.btn span').click(function(){
+          $('nav ul div.items').toggleClass("show");
+          $('nav ul li.btn span').toggleClass("show");
+       });
+      </script>
+</body>
+</html>
